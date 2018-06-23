@@ -1,0 +1,84 @@
+@mixin pageFont {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+@mixin links ($link, $visit, $hover, $active, $focus){
+     a {
+        color: $link;
+        text-decoration: none;
+        outline: none;
+        &:visited {
+            color: $visit;
+            text-decoration: none;
+            outline: none;
+        }
+        &:hover {
+            color: $hover;
+            text-decoration: none;
+            outline: none;
+        }
+        &:active {
+            color: $active;
+            text-decoration: none;
+            outline: none;
+        }
+        &:focus {
+            color: $focus;
+            text-decoration: none;
+            outline: none;
+        }
+     }
+}
+@mixin flex {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@mixin trans {
+    transition: all 0.3s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -ms-transition: all 0.3s ease 0s;
+}
+
+$primClr: #1E1E1E;
+$main-color: #5a90e6;
+$sec-color: #757575;
+$third-color: #e3eeff;
+$heading: #565656;
+$primTxt: #222222;
+$listClr: #526a75;
+$menuLinksClr: #fff;
+
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    border-radius: 15px;
+    background-color: $main-color;
+    text-align: center;
+    font-size: 16px;
+    min-width: 160px;
+    padding: 10px 15px;
+    -webkit-box-shadow: 0px 3px 15px 0px rgba(90,144,230,0.5);
+    -moz-box-shadow: 0px 3px 15px 0px rgba(90,144,230,0.5);
+    box-shadow: 0px 3px 15px 0px rgba(90,144,230,0.5);
+    &:hover {
+        opacity: .8;
+        color: #fff;
+    }
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+.container {
+    max-width: 1330px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
