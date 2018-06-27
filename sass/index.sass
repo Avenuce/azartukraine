@@ -1,7 +1,7 @@
 body
 	font-size: 14px
 	margin: 0 auto
-	background-color: green
+	background-color: #fffe93
 	.clearfix::after
 		content: ""
 		display: table
@@ -13,8 +13,8 @@ a
 header, footer, #wrapper
 	width: 100%
 	height: auto
-	background-color: black
 	margin: 0 auto
+	background: linear-gradient(#f1d801, #1015af)
 header
 	.container
 		max-width: 1250px
@@ -33,85 +33,179 @@ header
 		.search
 			float: right
 			margin: 40px 5px 0
-			border: 1px solid red
-			#site-search, button
+			border-bottom: 2px solid #1001f3
+			button, input
 				height: 60px
 				border: none
+				background: none
 			#site-search
 				width: 300px
 				float: left
 			button
 				width: 100px
 				float: right
+				background: linear-gradient(#ffe60a, #1001f3)
+				text-transform: uppercase
 #wrapper
-	background-color: green
+	background-color: #fffe93
 	max-width: 1250px
 .flex-container
 	display: -webkit-flex
-	display: flex 
+	display: flex
+p
+	text-align: justify
 main, aside
 	box-sizing: border-box
 	padding: 25px
+	background-color: inherit
+	section
+		background-color: inherit
 main
 	width: 70%
-	background-color: red
 	section
-		background-color: white
 		width: 100%
 		border: 1px solid red
-		.reviewBlock1, .reviewBlock2
+		.reviewBlock1, .reviewBlock2, .reviewBlock3
 			h1, p, img, h2
 				margin: 5px
+			p
+				margin: 20px 0
 			h1, h2
 				text-align: center
 				margin: 15px
-		.reviewBlock1
-			img
-				width: 100%
-				max-width: 200px
-				max-height: 200px
-				float: left
-			.site-link
-				width: 100%
-				max-width: 250px
-				margin: 0 auto
 			a
 				text-align: center
 				display: block
 				padding: 10px 40px
 				font-size: 16px
-				background-color: blue
+				background: linear-gradient(#ffe501, #1015af)
 				margin: 10px
-		.reviewBlock2
-			.flex-container
-				border: 1px solid black
+				border-radius: 15px
+				width: 100%
+				max-width: 250px
+				margin: 0 auto
+		.reviewBlock1
+			img
+				width: 100%
+				max-width: 250px
+				float: left
+				display: block
+		.reviewBlock2, .reviewBlock4
 			img
 				width: 50px
 				height: 50px
 				margin: 5px
+		.reviewBlock2
+			.flex-container
+				border: 1px solid black
 			span
 				display: block
 				max-width: 150px
 				border-right: 1px solid black
+				padding-top: 20px
+		.reviewBlock3
+			h2
+				text-align: center
+			img
+				width: 100%
+				max-width: 700px
+				max-height: 400px
+				margin: 10px auto
+				display: block
+		.reviewBlock4
 			p
-				margin: 0
-
-
-
-
-
-
-
-
+				margin: 20px auto
+			h2
+				text-align: center
+			span
+				display: block
+				max-width: 400px
+				padding-left: 50px
+				min-height: 50px
+				margin: 20px auto
+				border: 1px solid black
 aside
 	width: 30%
-	background-color: grey
-
-
-
-
-
+	ul
+		border: 1px solid black
+		list-style-type: none
+		margin: 0
+		padding: 10px
+		li:before
+			content: ""
+			background-image: url("../img/780315.jpg")
+			display: inline-block
+			width: 31px
+			height: 28px
+			background-size: 31px 28px
+		li	
+			a
+				text-decoration: underline
+				margin-left: 10px
+				vertical-align: top
+				display: inline-block
+	.topCasino
+		border: 1px solid black
+		margin-top: 10px
+		div, span
+			text-align: center
+			margin: 10px 0
+		img
+			width: 100%
+			max-width: 250px
+			max-height: 120px
+			margin: 0 auto
+			display: block
+		span
+			display: block
+		span:before
+			content: ""
+			background-image: url("../img/780315.jpg")
+			width: 33px
+			height: 28px
+			background-size: 33px 28px
+			margin-right: 10px
+			display: inline-block
 footer
 	clear: both
+	.flex-container
+		flex-direction: column
 	.container
+		width: 100%
 		max-width: 1250px
+		margin: 0 auto
+		text-align: center
+		span
+			display: block
+			text-align: center
+			margin: 10px
+		ul
+			list-style-type: none
+			margin: 0 auto
+			li
+				display: inline-block
+				padding: 10px
+				a
+					text-decoration: underline
+			li
+				.f_links
+					border: 1px solid #fff
+					border-radius: 50%
+					padding: 5px
+					background: linear-gradient(#ffe501, #1015af)
+	#anchor 
+		position: fixed
+		right: 32px
+		bottom: 32px
+		background: url(../img/logo.png) no-repeat left top
+		background-size: 40px 40px
+		width: 40px
+		height: 40px
+		cursor: pointer
+		border-radius: 6px
+		opacity: 0.2
+		-webkit-transition: all .2s ease-in-out
+		transition: all .2s ease-in-out
+		background: linear-gradient(#ffe501, #1015af)
+		:hover
+			opacity: 1
