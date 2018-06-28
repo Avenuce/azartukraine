@@ -1,7 +1,7 @@
 body {
   font-size: 14px;
   margin: 0 auto;
-  background-color: #fffe93;
+  background-color: #27282d;
 }
 body .clearfix::after {
   content: "";
@@ -12,15 +12,19 @@ body .clearfix::after {
 a {
   text-decoration: none;
 }
-a:hover {
+a :hover {
   text-decoration: none;
 }
 
-header, footer, #wrapper {
+li {
+  list-style-type: none;
+}
+
+header, footer {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background: linear-gradient(#f1d801, #1015af);
+  background: #27282d;
 }
 
 header .container {
@@ -36,7 +40,7 @@ header .container .logo {
 header .container .logo img {
   width: 100%;
   height: 100%;
-  margin: 5px;
+  margin: 10px;
 }
 header .container .logo a {
   display: block;
@@ -63,8 +67,11 @@ header .container .search button {
 }
 
 #wrapper {
-  background-color: #fffe93;
+  width: 100%;
   max-width: 1250px;
+  background-color: #27282d;
+  padding: 25px;
+  margin: 0 auto;
 }
 
 .flex-container {
@@ -72,47 +79,51 @@ header .container .search button {
   display: flex;
 }
 
-p {
+p, .reviewBlock4 span, li {
   text-align: justify;
-}
-
-main, aside {
-  box-sizing: border-box;
-  padding: 25px;
-  background-color: inherit;
-}
-main section, aside section {
-  background-color: inherit;
+  font-family: PT Sans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.27;
+  color: #beb0ce;
+  padding-top: 10px;
 }
 
 main {
   width: 70%;
+  margin-right: 20px;
 }
 main section {
   width: 100%;
   border: 1px solid red;
 }
 main section .reviewBlock1 h1, main section .reviewBlock1 p, main section .reviewBlock1 img, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 p, main section .reviewBlock2 img, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 p, main section .reviewBlock3 img, main section .reviewBlock3 h2 {
-  margin: 5px;
-}
-main section .reviewBlock1 p, main section .reviewBlock2 p, main section .reviewBlock3 p {
-  margin: 20px 0;
+  margin: 10px;
 }
 main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 h2 {
   text-align: center;
   margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #a2461f;
 }
 main section .reviewBlock1 a, main section .reviewBlock2 a, main section .reviewBlock3 a {
   text-align: center;
   display: block;
-  padding: 10px 40px;
+  padding: 15px;
   font-size: 16px;
-  background: linear-gradient(#ffe501, #1015af);
   margin: 10px;
-  border-radius: 15px;
+  border-radius: 3px;
   width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
+  max-width: 275px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  background-color: #e42525;
+  background-image: -webkit-linear-gradient(left, #e42525, #f75717);
+  background-image: linear-gradient(91deg, #e42525 0, #f75717);
+  box-shadow: 0 0 40px rgba(255, 77, 0, 0.45);
 }
 main section .reviewBlock1 img {
   width: 100%;
@@ -131,7 +142,6 @@ main section .reviewBlock2 .flex-container {
 main section .reviewBlock2 span {
   display: block;
   max-width: 150px;
-  border-right: 1px solid black;
   padding-top: 20px;
 }
 main section .reviewBlock3 h2 {
@@ -150,13 +160,26 @@ main section .reviewBlock4 p {
 main section .reviewBlock4 h2 {
   text-align: center;
 }
-main section .reviewBlock4 span {
-  display: block;
-  max-width: 400px;
-  padding-left: 50px;
+main section .reviewBlock4 ul {
+  max-width: 675px;
   min-height: 50px;
   margin: 20px auto;
-  border: 1px solid black;
+}
+main section .reviewBlock4 li {
+  display: inline-block;
+  width: 100%;
+}
+main section .reviewBlock4 li:nth-child(odd) {
+  background: #303133;
+}
+main section .reviewBlock4 li:before {
+  content: "";
+  background: url("../img/add.svg") no-repeat center;
+  float: left;
+  width: 31px;
+  height: 28px;
+  background-size: 31px 28px;
+  padding: 5px;
 }
 
 aside {
@@ -164,13 +187,12 @@ aside {
 }
 aside ul {
   border: 1px solid black;
-  list-style-type: none;
   margin: 0;
   padding: 10px;
 }
 aside ul li:before {
   content: "";
-  background-image: url("../img/780315.jpg");
+  background-image: url("../img/star.svg");
   display: inline-block;
   width: 31px;
   height: 28px;
@@ -181,14 +203,26 @@ aside ul li a {
   margin-left: 10px;
   vertical-align: top;
   display: inline-block;
+  text-transform: uppercase;
+  vertical-align: super;
+  text-decoration: none;
+  color: #bdbcc1;
 }
 aside .topCasino {
   border: 1px solid black;
   margin-top: 10px;
 }
-aside .topCasino div, aside .topCasino span {
+aside .topCasino div {
   text-align: center;
-  margin: 10px 0;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #a2461f;
+}
+aside .topCasino div:nth-child(even) {
+  color: #bdbbc1;
 }
 aside .topCasino img {
   width: 100%;
@@ -198,16 +232,24 @@ aside .topCasino img {
   display: block;
 }
 aside .topCasino span {
+  text-align: center;
   display: block;
+  margin: 5px 0;
+  font-family: PT Sans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #a99cb7;
 }
 aside .topCasino span:before {
   content: "";
-  background-image: url("../img/780315.jpg");
+  background-image: url("../img/icons/coins.svg");
   width: 33px;
   height: 28px;
   background-size: 33px 28px;
   margin-right: 10px;
   display: inline-block;
+  vertical-align: middle;
 }
 
 footer {
@@ -226,6 +268,8 @@ footer .container span {
   display: block;
   text-align: center;
   margin: 10px;
+  font-size: 12px;
+  color: #fff;
 }
 footer .container ul {
   list-style-type: none;
@@ -243,24 +287,49 @@ footer .container ul li .f_links {
   border-radius: 50%;
   padding: 5px;
   background: linear-gradient(#ffe501, #1015af);
+  text-decoration: none;
 }
 footer #anchor {
   position: fixed;
   right: 32px;
   bottom: 32px;
-  background: url(../img/logo.png) no-repeat left top;
+  background: url(../img/icons/ua.png) no-repeat;
   background-size: 40px 40px;
   width: 40px;
   height: 40px;
   cursor: pointer;
   border-radius: 6px;
-  opacity: 0.2;
+  opacity: 0.3;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
-  background: linear-gradient(#ffe501, #1015af);
 }
-footer #anchor :hover {
+footer #anchor:hover {
   opacity: 1;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+/* Styles */
+/* Smartphones (landscape) ----------- */
+/* Styles */
+/* Smartphones (portrait) ----------- */
+/* Styles */
+/* iPads (portrait and landscape) ----------- */
+/* Styles */
+ * #wrapper
+ * padding: 0 */
+/* iPads (landscape) ----------- */
+/* Styles */
+ * #wrapper
+ * padding: 0 */
+/* iPads (portrait) ----------- */
+/* Styles */
+ * #wrapper
+ * padding: 0 */
+/* Desktops and laptops ----------- */
+/* Styles */
+/* Large screens ----------- */
+/* Styles */
+/* iPhone 4 ----------- */
+/* Styles */
 
 /*# sourceMappingURL=index.css.map */

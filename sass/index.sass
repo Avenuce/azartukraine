@@ -1,20 +1,22 @@
 body
 	font-size: 14px
 	margin: 0 auto
-	background-color: #fffe93
+	background-color: #27282d
 	.clearfix::after
 		content: ""
 		display: table
 		clear: both
 a 
 	text-decoration: none
-	&:hover 
+	:hover 
 		text-decoration: none
-header, footer, #wrapper
+li
+	list-style-type: none
+header, footer
 	width: 100%
 	height: auto
 	margin: 0 auto
-	background: linear-gradient(#f1d801, #1015af)
+	background: #27282d
 header
 	.container
 		max-width: 1250px
@@ -27,7 +29,7 @@ header
 			img
 				width: 100%
 				height: 100%
-				margin: 5px
+				margin: 10px
 			a
 				display: block
 		.search
@@ -47,43 +49,54 @@ header
 				background: linear-gradient(#ffe60a, #1001f3)
 				text-transform: uppercase
 #wrapper
-	background-color: #fffe93
+	width: 100%
 	max-width: 1250px
+	background-color: #27282d
+	padding: 25px
+	margin: 0 auto
 .flex-container
 	display: -webkit-flex
 	display: flex
-p
+p, .reviewBlock4 span, li
 	text-align: justify
-main, aside
-	box-sizing: border-box
-	padding: 25px
-	background-color: inherit
-	section
-		background-color: inherit
+	font-family: PT Sans, sans-serif
+	font-weight: 500
+	font-size: 16px
+	line-height: 1.27
+	color: #beb0ce
+	padding-top: 10px
 main
 	width: 70%
+	margin-right: 20px
 	section
 		width: 100%
 		border: 1px solid red
 		.reviewBlock1, .reviewBlock2, .reviewBlock3
 			h1, p, img, h2
-				margin: 5px
-			p
-				margin: 20px 0
+				margin: 10px
 			h1, h2
 				text-align: center
 				margin: 15px
+				font-size: 20px
+				font-weight: 700
+				line-height: 1
+				text-transform: uppercase
+				color: #a2461f
 			a
 				text-align: center
 				display: block
-				padding: 10px 40px
+				padding: 15px
 				font-size: 16px
-				background: linear-gradient(#ffe501, #1015af)
 				margin: 10px
-				border-radius: 15px
+				border-radius: 3px
 				width: 100%
-				max-width: 250px
-				margin: 0 auto
+				max-width: 275px
+				margin: 10px auto
+				box-sizing: border-box
+				background-color: #e42525
+				background-image: -webkit-linear-gradient(left, #e42525, #f75717)
+				background-image: linear-gradient(91deg, #e42525 0, #f75717)
+				box-shadow: 0 0 40px rgba(255, 77, 0, .45)
 		.reviewBlock1
 			img
 				width: 100%
@@ -101,7 +114,6 @@ main
 			span
 				display: block
 				max-width: 150px
-				border-right: 1px solid black
 				padding-top: 20px
 		.reviewBlock3
 			h2
@@ -117,23 +129,32 @@ main
 				margin: 20px auto
 			h2
 				text-align: center
-			span
-				display: block
-				max-width: 400px
-				padding-left: 50px
+			ul
+				max-width: 675px
 				min-height: 50px
 				margin: 20px auto
-				border: 1px solid black
+			li
+				display: inline-block
+				width: 100%
+			li:nth-child(odd)
+				background: #303133
+			li:before
+				content: ""
+				background: url("../img/add.svg") no-repeat center
+				float: left
+				width: 31px
+				height: 28px
+				background-size: 31px 28px
+				padding: 5px
 aside
 	width: 30%
 	ul
 		border: 1px solid black
-		list-style-type: none
 		margin: 0
 		padding: 10px
 		li:before
 			content: ""
-			background-image: url("../img/780315.jpg")
+			background-image: url("../img/star.svg")
 			display: inline-block
 			width: 31px
 			height: 28px
@@ -144,12 +165,23 @@ aside
 				margin-left: 10px
 				vertical-align: top
 				display: inline-block
+				text-transform: uppercase
+				vertical-align: super
+				text-decoration: none
+				color: #bdbcc1
 	.topCasino
 		border: 1px solid black
 		margin-top: 10px
-		div, span
+		div
 			text-align: center
-			margin: 10px 0
+			margin: 15px
+			font-size: 20px
+			font-weight: 700
+			line-height: 1
+			text-transform: uppercase
+			color: #a2461f
+		div:nth-child(even)
+			color: #bdbbc1
 		img
 			width: 100%
 			max-width: 250px
@@ -157,15 +189,23 @@ aside
 			margin: 0 auto
 			display: block
 		span
+			text-align: center
 			display: block
+			margin: 5px 0
+			font-family: PT Sans, sans-serif
+			font-weight: 500
+			font-size: 16px
+			line-height: 1.25
+			color: #a99cb7
 		span:before
 			content: ""
-			background-image: url("../img/780315.jpg")
+			background-image: url("../img/icons/coins.svg")
 			width: 33px
 			height: 28px
 			background-size: 33px 28px
 			margin-right: 10px
 			display: inline-block
+			vertical-align: middle
 footer
 	clear: both
 	.flex-container
@@ -179,6 +219,8 @@ footer
 			display: block
 			text-align: center
 			margin: 10px
+			font-size: 12px
+			color: #fff
 		ul
 			list-style-type: none
 			margin: 0 auto
@@ -193,19 +235,66 @@ footer
 					border-radius: 50%
 					padding: 5px
 					background: linear-gradient(#ffe501, #1015af)
+					text-decoration: none
 	#anchor 
 		position: fixed
 		right: 32px
 		bottom: 32px
-		background: url(../img/logo.png) no-repeat left top
+		background: url(../img/icons/ua.png) no-repeat
 		background-size: 40px 40px
 		width: 40px
 		height: 40px
 		cursor: pointer
 		border-radius: 6px
-		opacity: 0.2
+		opacity: 0.3
 		-webkit-transition: all .2s ease-in-out
 		transition: all .2s ease-in-out
-		background: linear-gradient(#ffe501, #1015af)
-		:hover
-			opacity: 1
+	#anchor:hover
+		opacity: 1
+
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) 
+/* Styles */
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) 
+/* Styles */
+
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) 
+/* Styles */
+
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) 
+/* Styles */
+	#wrapper
+		padding: 0
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) 
+/* Styles */
+	#wrapper
+		padding: 0
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) 
+/* Styles */
+	#wrapper
+		padding: 0
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1224px) 
+/* Styles */
+
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) 
+/* Styles */
+
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) 
+/* Styles */
