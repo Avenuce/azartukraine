@@ -24,7 +24,11 @@ header, footer {
   width: 100%;
   height: auto;
   margin: 0 auto;
-  background: #27282d;
+  background: #303135;
+  position: relative;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
 }
 
 header .container {
@@ -97,10 +101,10 @@ main section {
   width: 100%;
   border: 1px solid red;
 }
-main section .reviewBlock1 h1, main section .reviewBlock1 p, main section .reviewBlock1 img, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 p, main section .reviewBlock2 img, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 p, main section .reviewBlock3 img, main section .reviewBlock3 h2 {
+main section .reviewBlock1 h1, main section .reviewBlock1 p, main section .reviewBlock1 img, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 p, main section .reviewBlock2 img, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 p, main section .reviewBlock3 img, main section .reviewBlock3 h2, main section .reviewBlock4 h1, main section .reviewBlock4 p, main section .reviewBlock4 img, main section .reviewBlock4 h2 {
   margin: 10px;
 }
-main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 h2 {
+main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .reviewBlock2 h1, main section .reviewBlock2 h2, main section .reviewBlock3 h1, main section .reviewBlock3 h2, main section .reviewBlock4 h1, main section .reviewBlock4 h2 {
   text-align: center;
   margin: 15px;
   font-size: 20px;
@@ -109,7 +113,7 @@ main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .revi
   text-transform: uppercase;
   color: #a2461f;
 }
-main section .reviewBlock1 a, main section .reviewBlock2 a, main section .reviewBlock3 a {
+main section .reviewBlock1 a, main section .reviewBlock2 a, main section .reviewBlock3 a, main section .reviewBlock4 a {
   text-align: center;
   display: block;
   padding: 15px;
@@ -140,15 +144,21 @@ main section .reviewBlock2 table {
   width: 100%;
   margin: 10px;
   border-collapse: collapse;
-  border: 1px solid black;
   margin: 0 auto;
 }
 main section .reviewBlock2 table tr {
-  border: 1px solid red;
   margin: 10px auto;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-sizing: border-box;
+}
+main section .reviewBlock2 table tr:nth-child(odd) {
+  background: #303133;
 }
 main section .reviewBlock2 table th {
-  width: 25%;
+  border-right: 1px solid #4d4d4e;
+  width: 30%;
 }
 main section .reviewBlock2 table th:before {
   content: "";
@@ -159,8 +169,8 @@ main section .reviewBlock2 table th:before {
   background-size: 31px 28px;
   padding: 5px;
 }
-main section .reviewBlock2 table tr {
-  max-width: 75%;
+main section .reviewBlock2 table td {
+  vertical-align: middle;
 }
 main section .reviewBlock2 span {
   display: block;
@@ -184,13 +194,17 @@ main section .reviewBlock4 h2 {
   text-align: center;
 }
 main section .reviewBlock4 ul {
-  max-width: 675px;
   min-height: 50px;
-  margin: 20px auto;
+  padding: 0;
 }
 main section .reviewBlock4 li {
   display: inline-block;
   width: 100%;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
 }
 main section .reviewBlock4 li:nth-child(odd) {
   background: #303133;
@@ -208,8 +222,12 @@ main section .reviewBlock4 li:before {
 aside {
   width: 30%;
 }
+aside ul, aside .topCasino {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+}
 aside ul {
-  border: 1px solid black;
   margin: 0;
   padding: 10px;
 }
@@ -232,8 +250,8 @@ aside ul li a {
   color: #bdbcc1;
 }
 aside .topCasino {
-  border: 1px solid black;
-  margin-top: 10px;
+  padding: 3px;
+  margin-top: 15px;
 }
 aside .topCasino div {
   text-align: center;

@@ -16,7 +16,11 @@ header, footer
 	width: 100%
 	height: auto
 	margin: 0 auto
-	background: #27282d
+	background: #303135
+	position: relative
+	-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92)
+	-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92)
+	box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92)
 header
 	.container
 		max-width: 1250px
@@ -71,7 +75,7 @@ main
 	section
 		width: 100%
 		border: 1px solid red
-		.reviewBlock1, .reviewBlock2, .reviewBlock3
+		.reviewBlock1, .reviewBlock2, .reviewBlock3, .reviewBlock4
 			h1, p, img, h2
 				margin: 10px
 			h1, h2
@@ -113,13 +117,18 @@ main
 				width: 100%
 				margin: 10px
 				border-collapse: collapse
-				border: 1px solid black
 				margin: 0 auto
 				tr
-					border: 1px solid red
 					margin: 10px auto
+					-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+					-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+					box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+					box-sizing: border-box
+				tr:nth-child(odd)
+					background: #303133	
 				th
-					width: 25%
+					border-right: 1px solid #4d4d4e
+					width: 30%
 				th:before
 					content: ""
 					background: url("../img/add.svg") no-repeat center
@@ -128,8 +137,8 @@ main
 					height: 28px
 					background-size: 31px 28px
 					padding: 5px
-				tr
-					max-width: 75%
+				td
+					vertical-align: middle
 			span
 				display: block
 				max-width: 150px
@@ -149,14 +158,19 @@ main
 			h2
 				text-align: center
 			ul
-				max-width: 675px
 				min-height: 50px
-				margin: 20px auto
+				padding: 0
 			li
 				display: inline-block
 				width: 100%
+				padding: 5px 20px
+				box-sizing: border-box
+				-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+				-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+				box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
 			li:nth-child(odd)
 				background: #303133
+
 			li:before
 				content: ""
 				background: url("../img/add.svg") no-repeat center
@@ -167,8 +181,11 @@ main
 				padding: 5px
 aside
 	width: 30%
+	ul, .topCasino
+		-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+		-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+		box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
 	ul
-		border: 1px solid black
 		margin: 0
 		padding: 10px
 		li:before
@@ -189,8 +206,8 @@ aside
 				text-decoration: none
 				color: #bdbcc1
 	.topCasino
-		border: 1px solid black
-		margin-top: 10px
+		padding: 3px
+		margin-top: 15px
 		div
 			text-align: center
 			margin: 15px
