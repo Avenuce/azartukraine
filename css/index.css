@@ -136,8 +136,31 @@ main section .reviewBlock2 img, main section .reviewBlock4 img {
   height: 50px;
   margin: 5px;
 }
-main section .reviewBlock2 .flex-container {
+main section .reviewBlock2 table {
+  width: 100%;
+  margin: 10px;
+  border-collapse: collapse;
   border: 1px solid black;
+  margin: 0 auto;
+}
+main section .reviewBlock2 table tr {
+  border: 1px solid red;
+  margin: 10px auto;
+}
+main section .reviewBlock2 table th {
+  width: 25%;
+}
+main section .reviewBlock2 table th:before {
+  content: "";
+  background: url("../img/add.svg") no-repeat center;
+  float: left;
+  width: 31px;
+  height: 28px;
+  background-size: 31px 28px;
+  padding: 5px;
+}
+main section .reviewBlock2 table tr {
+  max-width: 75%;
 }
 main section .reviewBlock2 span {
   display: block;

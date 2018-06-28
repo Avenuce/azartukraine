@@ -109,8 +109,27 @@ main
 				height: 50px
 				margin: 5px
 		.reviewBlock2
-			.flex-container
+			table
+				width: 100%
+				margin: 10px
+				border-collapse: collapse
 				border: 1px solid black
+				margin: 0 auto
+				tr
+					border: 1px solid red
+					margin: 10px auto
+				th
+					width: 25%
+				th:before
+					content: ""
+					background: url("../img/add.svg") no-repeat center
+					float: left
+					width: 31px
+					height: 28px
+					background-size: 31px 28px
+					padding: 5px
+				tr
+					max-width: 75%
 			span
 				display: block
 				max-width: 150px
