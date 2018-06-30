@@ -2,14 +2,13 @@ body
 	font-size: 14px
 	margin: 0 auto
 	background-color: #27282d
+	box-sizing: border-box
 	.clearfix::after
 		content: ""
 		display: table
 		clear: both
-a 
+a, a:hover
 	text-decoration: none
-	:hover 
-		text-decoration: none
 li
 	list-style-type: none
 header, footer
@@ -68,7 +67,7 @@ header
 .flex-container
 	display: -webkit-flex
 	display: flex
-p, .reviewBlock4 span, li
+p, .reviewBlock4 span, li, table
 	text-align: justify
 	font-family: PT Sans, sans-serif
 	font-weight: 500
@@ -76,38 +75,53 @@ p, .reviewBlock4 span, li
 	line-height: 1.27
 	color: #beb0ce
 	padding-top: 10px
+.c_btn, .g_btn, .r_btn
+	text-align: center
+	display: block
+	padding: 15px
+	font-size: 16px
+	margin: 10px
+	border-radius: 3px
+	width: 100%
+	max-width: 275px
+	margin: 10px auto
+	box-sizing: border-box
+	background-color: #e42525
+	background-image: -webkit-linear-gradient(left, #e42525, #f75717)
+	background-image: linear-gradient(91deg, #e42525 0, #f75717)
+	box-shadow: 0 0 40px rgba(255, 77, 0, .45)
+.play_b
+	display: none
+	position: absolute
+	top: 50%
+	left: 0
+	border: 1px solid black
+	width: 100%
+	line-height: 0
+	vertical-align: middle
+	text-align: center
+	font-weight: bold
+	text-transform: uppercase
+	box-sizing: border-box	
 main
 	width: 70%
 	margin-right: 20px
+	-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+	-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+	box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
 	section
 		width: 100%
-		border: 1px solid red
 		.reviewBlock1, .reviewBlock2, .reviewBlock3, .reviewBlock4
-			h1, p, img, h2
+			h1, p, img, h2, h3
 				margin: 10px
-			h1, h2
+			h1, h2, h3
 				text-align: center
 				margin: 15px
 				font-size: 20px
 				font-weight: 700
 				line-height: 1
 				text-transform: uppercase
-				color: #a2461f
-			a
-				text-align: center
-				display: block
-				padding: 15px
-				font-size: 16px
-				margin: 10px
-				border-radius: 3px
-				width: 100%
-				max-width: 275px
-				margin: 10px auto
-				box-sizing: border-box
-				background-color: #e42525
-				background-image: -webkit-linear-gradient(left, #e42525, #f75717)
-				background-image: linear-gradient(91deg, #e42525 0, #f75717)
-				box-shadow: 0 0 40px rgba(255, 77, 0, .45)
+				color: #a2461f			
 		.reviewBlock1
 			img
 				width: 100%
@@ -162,6 +176,7 @@ main
 		.reviewBlock4
 			p
 				margin: 20px auto
+				padding: 0 10px
 			h2
 				text-align: center
 			ul
@@ -177,7 +192,6 @@ main
 				box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
 			li:nth-child(odd)
 				background: #303133
-
 			li:before
 				content: ""
 				background: url("../img/add.svg") no-repeat center
@@ -186,8 +200,88 @@ main
 				height: 28px
 				background-size: 31px 28px
 				padding: 5px
+			img
+				width: 100%
+				height: 100%
+				display: block
+				max-width: 720px
+				max-height: 400px
+				margin: 0 auto
+		.reviewBlock6
+			.cas_l
+				li
+					display: inline-block
+					width: 25%
+					float: left
+					background: none
+					padding: 3px
+					box-shadow: none
+					position: relative
+					div
+						display: none
+						position: absolute
+						top: 50%
+						left: 0
+						border: 1px solid black
+						width: 100%
+						line-height: 0
+						text-align: center
+						font-weight: bold
+						text-transform: uppercase				
+				li:before
+					content: none
+				li:hover
+					.play_b
+						display: block
+			img
+				-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+				-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+				box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
+			.g_btn
+				background-color: green
+			.r_btn
+				background-color: red
+			table 
+				width: 100%
+				border-collapse: collapse
+				text-align: center
+				tr
+					height: 50px
+					td
+						padding: 0 5px
+						span
+							padding: 10px
+						a
+							display: block
+							height: 50px
+							min-width: 90px
+							img
+				tr:nth-child(odd)
+					background: #303133
+	.cas_l2
+		width: 100%
+		text-align: center
+		margin: 0
+		padding: 0
+		li:hover
+			.play_b
+				display: block
+		li
+			width: 100%
+			max-width: 250px
+			max-height: 250px
+			padding: 0
+			margin: 0 auto
+			display: inline-block
+			margin: 1%
+			box-sizing: border-box
+			position: relative
+			img
+				width: 100%
 aside
 	width: 30%
+	div
+		position: relative
 	ul, .topCasino
 		-webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
 		-moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset
@@ -212,6 +306,14 @@ aside
 				vertical-align: super
 				text-decoration: none
 				color: #bdbcc1
+	.topCasino:hover
+		div
+			.play_b
+				display: block
+				margin: 0
+				line-height: 0
+			img:hover
+				opacity: 0.1
 	.topCasino
 		padding: 3px
 		margin-top: 15px
@@ -223,14 +325,14 @@ aside
 			line-height: 1
 			text-transform: uppercase
 			color: #a2461f
+			img
+				width: 100%
+				max-width: 250px
+				max-height: 120px
+				margin: 0 auto
+				display: block
 		div:nth-child(even)
 			color: #bdbbc1
-		img
-			width: 100%
-			max-width: 250px
-			max-height: 120px
-			margin: 0 auto
-			display: block
 		span
 			text-align: center
 			display: block
@@ -249,6 +351,7 @@ aside
 			margin-right: 10px
 			display: inline-block
 			vertical-align: middle
+
 footer
 	clear: both
 	.flex-container
