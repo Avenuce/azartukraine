@@ -1,0 +1,492 @@
+body {
+  font-size: 14px;
+  margin: 0 auto;
+  background-color: #1B1C1F;
+  color: #beb0ce;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a, a:hover, a:focus {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+header, footer, .search, .search button, main {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+}
+
+header, footer {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: #212226;
+  position: relative;
+}
+header .container, footer .container {
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+header a {
+  width: 192px;
+  height: 140px;
+  float: left;
+  padding: 5px;
+  display: block;
+}
+header a img {
+  width: 100%;
+  height: 100%;
+}
+
+.search {
+  float: right;
+  margin: 40px 5px 0;
+}
+.search button, .search input {
+  height: 60px;
+  border: none;
+  background-color: #beb0ce;
+  outline: none;
+}
+.search button {
+  width: 50px;
+  float: right;
+  background: url("../img/search.svg") no-repeat center;
+  background-size: 25px 25px;
+}
+
+#site-search {
+  width: 300px;
+  float: left;
+  padding: 5px;
+}
+
+#wrapper {
+  width: 100%;
+  max-width: 1250px;
+  background-color: inherit;
+  padding: 25px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+}
+
+p, .reviewBlock4 span, li, table {
+  text-align: justify;
+  font-family: PT Sans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.27;
+  color: #beb0ce;
+  padding-top: 10px;
+}
+
+.c_btn, .g_btn, .r_btn {
+  text-align: center;
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 3px;
+  width: 100%;
+  max-width: 275px;
+  margin: 10px auto;
+  box-sizing: border-box;
+  background-color: #e42525;
+  background-image: -webkit-linear-gradient(left, #e42525, #f75717);
+  background-image: linear-gradient(91deg, #e42525 0, #f75717);
+  box-shadow: 0 0 40px rgba(255, 77, 0, 0.45);
+}
+
+.play_b {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 1px solid black;
+  width: 100%;
+  line-height: 0;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  box-sizing: border-box;
+}
+
+main {
+  width: 70%;
+  margin-right: 20px;
+}
+main section {
+  width: 100%;
+}
+main section .reviewBlock1 h1, main section .reviewBlock1 p, main section .reviewBlock1 img, main section .reviewBlock1 h2, main section .reviewBlock1 h3, main section .reviewBlock2 h1, main section .reviewBlock2 p, main section .reviewBlock2 img, main section .reviewBlock2 h2, main section .reviewBlock2 h3, main section .reviewBlock3 h1, main section .reviewBlock3 p, main section .reviewBlock3 img, main section .reviewBlock3 h2, main section .reviewBlock3 h3, main section .reviewBlock4 h1, main section .reviewBlock4 p, main section .reviewBlock4 img, main section .reviewBlock4 h2, main section .reviewBlock4 h3 {
+  margin: 10px;
+}
+main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .reviewBlock1 h3, main section .reviewBlock2 h1, main section .reviewBlock2 h2, main section .reviewBlock2 h3, main section .reviewBlock3 h1, main section .reviewBlock3 h2, main section .reviewBlock3 h3, main section .reviewBlock4 h1, main section .reviewBlock4 h2, main section .reviewBlock4 h3 {
+  text-align: center;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #a2461f;
+}
+main section .reviewBlock1 img {
+  width: 100%;
+  max-width: 250px;
+  float: left;
+  display: block;
+}
+main section .reviewBlock2 img, main section .reviewBlock4 img {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+}
+main section .reviewBlock2 table {
+  width: 100%;
+  margin: 10px;
+  border-collapse: collapse;
+  margin: 0 auto;
+}
+main section .reviewBlock2 table tr {
+  margin: 10px auto;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-sizing: border-box;
+}
+main section .reviewBlock2 table tr:nth-child(odd) {
+  background: #303133;
+}
+main section .reviewBlock2 table th {
+  border-right: 1px solid #4d4d4e;
+  width: 30%;
+}
+main section .reviewBlock2 table th:before {
+  content: "";
+  background: url("../img/add.svg") no-repeat center;
+  float: left;
+  width: 31px;
+  height: 28px;
+  background-size: 31px 28px;
+  padding: 5px;
+}
+main section .reviewBlock2 table td {
+  vertical-align: middle;
+}
+main section .reviewBlock2 span {
+  display: block;
+  max-width: 150px;
+  padding-top: 20px;
+}
+main section .reviewBlock3 h2 {
+  text-align: center;
+}
+main section .reviewBlock3 img {
+  width: 100%;
+  max-width: 700px;
+  max-height: 400px;
+  margin: 10px auto;
+  display: block;
+}
+main section .reviewBlock4 p {
+  margin: 20px auto;
+  padding: 0 10px;
+}
+main section .reviewBlock4 h2 {
+  text-align: center;
+}
+main section .reviewBlock4 ul {
+  min-height: 50px;
+  padding: 0;
+}
+main section .reviewBlock4 li {
+  display: inline-block;
+  width: 100%;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+}
+main section .reviewBlock4 li:nth-child(odd) {
+  background: #303133;
+}
+main section .reviewBlock4 li:before {
+  content: "";
+  background: url("../img/add.svg") no-repeat center;
+  float: left;
+  width: 31px;
+  height: 28px;
+  background-size: 31px 28px;
+  padding: 5px;
+}
+main section .reviewBlock4 img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  max-width: 720px;
+  max-height: 400px;
+  margin: 0 auto;
+}
+main section .reviewBlock6 .cas_l li {
+  display: inline-block;
+  width: 25%;
+  float: left;
+  background: none;
+  padding: 3px;
+  box-shadow: none;
+  position: relative;
+}
+main section .reviewBlock6 .cas_l li div {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  border: 1px solid black;
+  width: 100%;
+  line-height: 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+main section .reviewBlock6 .cas_l li:before {
+  content: none;
+}
+main section .reviewBlock6 .cas_l li:hover .play_b {
+  display: block;
+}
+main section .reviewBlock6 img {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+}
+main section .reviewBlock6 .g_btn {
+  background-color: green;
+}
+main section .reviewBlock6 .r_btn {
+  background-color: red;
+}
+main section .reviewBlock6 table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+main section .reviewBlock6 table tr {
+  height: 50px;
+}
+main section .reviewBlock6 table tr td {
+  padding: 0 5px;
+}
+main section .reviewBlock6 table tr td span {
+  padding: 10px;
+}
+main section .reviewBlock6 table tr td a {
+  display: block;
+  height: 50px;
+  min-width: 90px;
+}
+main section .reviewBlock6 table tr:nth-child(odd) {
+  background: #303133;
+}
+main .cas_l2 {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+main .cas_l2 li:hover .play_b {
+  display: block;
+}
+main .cas_l2 li {
+  width: 100%;
+  max-width: 250px;
+  max-height: 250px;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  margin: 1%;
+  box-sizing: border-box;
+  position: relative;
+}
+main .cas_l2 li img {
+  width: 100%;
+}
+
+aside {
+  width: 30%;
+}
+aside div {
+  position: relative;
+}
+aside ul, aside .topCasino {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+}
+aside ul {
+  margin: 0;
+  padding: 10px;
+}
+aside ul li:before {
+  content: "";
+  background-image: url("../img/star.svg");
+  display: inline-block;
+  width: 31px;
+  height: 28px;
+  background-size: 31px 28px;
+}
+aside ul li a {
+  text-decoration: underline;
+  margin-left: 10px;
+  vertical-align: top;
+  display: inline-block;
+  text-transform: uppercase;
+  vertical-align: super;
+  text-decoration: none;
+  color: #bdbcc1;
+}
+aside .topCasino:hover div .play_b {
+  display: block;
+  margin: 0;
+  line-height: 0;
+}
+aside .topCasino:hover div img:hover {
+  opacity: 0.1;
+}
+aside .topCasino {
+  padding: 3px;
+  margin-top: 15px;
+}
+aside .topCasino div {
+  text-align: center;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #a2461f;
+}
+aside .topCasino div img {
+  width: 100%;
+  max-width: 250px;
+  max-height: 120px;
+  margin: 0 auto;
+  display: block;
+}
+aside .topCasino div:nth-child(even) {
+  color: #bdbbc1;
+}
+aside .topCasino span {
+  text-align: center;
+  display: block;
+  margin: 5px 0;
+  font-family: PT Sans, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.25;
+  color: #a99cb7;
+}
+aside .topCasino span:before {
+  content: "";
+  background-image: url("../img/icons/coins.svg");
+  width: 33px;
+  height: 28px;
+  background-size: 33px 28px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+footer {
+  clear: both;
+}
+footer .flex-container {
+  flex-direction: column;
+}
+footer .container {
+  width: 100%;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+}
+footer .container span {
+  display: block;
+  text-align: center;
+  margin: 10px;
+  font-size: 12px;
+  color: #fff;
+}
+footer .container ul {
+  list-style-type: none;
+  margin: 0 auto;
+}
+footer .container ul li {
+  display: inline-block;
+  padding: 10px;
+}
+footer .container ul li a {
+  text-decoration: underline;
+}
+footer .container .f_links a {
+  padding: 5px;
+  display: inline-block;
+}
+footer .container .vk, footer .container .tw, footer .container .fb, footer .container .goo {
+  vertical-align: middle;
+  background-size: 25px 25px;
+  width: 25px;
+  height: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+footer .container .vk {
+  background-image: url("../img/vk.svg");
+}
+footer .container .tw {
+  background-image: url("../img/tw.svg");
+}
+footer .container .fb {
+  background-image: url("../img/fb.svg");
+}
+footer .container .goo {
+  background-image: url("../img/goo.svg");
+}
+footer #anchor {
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+  background: url(../img/icons/ua.png) no-repeat;
+  background-size: 40px 40px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  opacity: 0.3;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+footer #anchor:hover {
+  opacity: 1;
+}
+
+/*# sourceMappingURL=index1.css.map */
