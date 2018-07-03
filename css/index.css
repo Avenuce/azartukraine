@@ -8,11 +8,23 @@ body {
     display: table;
     clear: both; }
 
-a, a:hover {
+* {
+  box-sizing: border-box; }
+
+ul, ol {
+  margin: 0;
+  padding: 0; }
+
+a, a:hover, a:focus {
   text-decoration: none; }
 
 li {
   list-style-type: none; }
+
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; }
 
 header, footer {
   width: 100%;
@@ -24,63 +36,57 @@ header, footer {
   -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
   box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92); }
 
-header .container {
+#wrapper, .container {
   max-width: 1250px;
-  height: 150px;
+  padding: 2px;
   margin: 0 auto; }
-  header .container .logo {
-    width: 192px;
-    height: 140px;
-    float: left; }
-    header .container .logo img {
-      width: 100%;
-      height: 100%;
-      margin: 10px; }
-    header .container .logo a {
-      display: block; }
-  header .container .search {
-    float: right;
-    margin: 40px 5px 0;
-    -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
-    -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
-    box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92); }
-    header .container .search button, header .container .search input {
-      height: 60px;
-      border: none;
-      background: none;
-      outline: none; }
-    header .container .search #site-search {
-      width: 300px;
-      float: left;
-      padding: 5px; }
-    header .container .search button {
-      width: 100px;
-      float: right;
-      background: url("../img/search.svg") no-repeat center;
-      background-size: 25px 25px;
-      webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
-      -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
-      box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92); }
+
+header .flex-container {
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+header a {
+  width: 192px;
+  height: 140px;
+  background: url("../img/logo.png") no-repeat center;
+  background-size: 192px 140px;
+  display: block; }
+header .search {
+  -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92); }
+header button, header input {
+  height: 60px;
+  border: none;
+  background: none;
+  outline: none; }
+header #site-search {
+  width: 300px;
+  float: left;
+  padding: 5px; }
+header button {
+  width: 100px;
+  float: right;
+  background: url("../img/search.svg") no-repeat center;
+  background-size: 25px 25px;
+  webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92);
+  box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92); }
 
 #wrapper {
-  width: 100%;
-  max-width: 1250px;
   background-color: #27282d;
-  padding: 25px;
-  margin: 0 auto; }
+  padding: 5px; }
 
-.flex-container {
-  display: -webkit-flex;
-  display: flex; }
-
-p, .reviewBlock4 span, li, table {
+p, .reviewBlock1 span, li, table {
   text-align: justify;
   font-family: PT Sans, sans-serif;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.27;
-  color: #beb0ce;
-  padding-top: 10px; }
+  color: #beb0ce; }
 
 .c_btn, .g_btn, .r_btn {
   text-align: center;
@@ -101,16 +107,16 @@ p, .reviewBlock4 span, li, table {
 .play_b {
   display: none;
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: red;
   border: 1px solid black;
-  width: 100%;
-  line-height: 0;
-  vertical-align: middle;
-  text-align: center;
-  font-weight: bold;
-  text-transform: uppercase;
-  box-sizing: border-box; }
+  width: 75%;
+  height: 45%;
+  margin: auto;
+  padding: 15px 0; }
 
 main {
   width: 70%;
@@ -118,220 +124,192 @@ main {
   -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
   -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
   box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset; }
-  main section {
-    width: 100%; }
-    main section .reviewBlock1 h1, main section .reviewBlock1 p, main section .reviewBlock1 img, main section .reviewBlock1 h2, main section .reviewBlock1 h3, main section .reviewBlock2 h1, main section .reviewBlock2 p, main section .reviewBlock2 img, main section .reviewBlock2 h2, main section .reviewBlock2 h3, main section .reviewBlock3 h1, main section .reviewBlock3 p, main section .reviewBlock3 img, main section .reviewBlock3 h2, main section .reviewBlock3 h3, main section .reviewBlock4 h1, main section .reviewBlock4 p, main section .reviewBlock4 img, main section .reviewBlock4 h2, main section .reviewBlock4 h3 {
-      margin: 10px; }
-    main section .reviewBlock1 h1, main section .reviewBlock1 h2, main section .reviewBlock1 h3, main section .reviewBlock2 h1, main section .reviewBlock2 h2, main section .reviewBlock2 h3, main section .reviewBlock3 h1, main section .reviewBlock3 h2, main section .reviewBlock3 h3, main section .reviewBlock4 h1, main section .reviewBlock4 h2, main section .reviewBlock4 h3 {
-      text-align: center;
-      margin: 15px;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 1;
-      text-transform: uppercase;
-      color: #a2461f; }
-    main section .reviewBlock1 img {
-      width: 100%;
-      max-width: 250px;
-      float: left;
-      display: block; }
-    main section .reviewBlock2 img, main section .reviewBlock4 img {
-      width: 50px;
-      height: 50px;
-      margin: 5px; }
-    main section .reviewBlock2 table {
-      width: 100%;
-      margin: 10px;
-      border-collapse: collapse;
-      margin: 0 auto; }
-      main section .reviewBlock2 table tr {
-        margin: 10px auto;
-        -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-        -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-        box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-        box-sizing: border-box; }
-      main section .reviewBlock2 table tr:nth-child(odd) {
-        background: #303133; }
-      main section .reviewBlock2 table th {
-        border-right: 1px solid #4d4d4e;
-        width: 30%; }
-      main section .reviewBlock2 table th:before {
-        content: "";
-        background: url("../img/add.svg") no-repeat center;
-        float: left;
-        width: 31px;
-        height: 28px;
-        background-size: 31px 28px;
-        padding: 5px; }
-      main section .reviewBlock2 table td {
-        vertical-align: middle; }
-    main section .reviewBlock2 span {
-      display: block;
-      max-width: 150px;
-      padding-top: 20px; }
-    main section .reviewBlock3 h2 {
-      text-align: center; }
-    main section .reviewBlock3 img {
-      width: 100%;
-      max-width: 700px;
-      max-height: 400px;
-      margin: 10px auto;
-      display: block; }
-    main section .reviewBlock4 p {
-      margin: 20px auto;
-      padding: 0 10px; }
-    main section .reviewBlock4 h2 {
-      text-align: center; }
-    main section .reviewBlock4 ul {
-      min-height: 50px;
-      padding: 0; }
-    main section .reviewBlock4 li {
-      display: inline-block;
-      width: 100%;
-      padding: 5px 20px;
-      box-sizing: border-box;
-      -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-      -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-      box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset; }
-    main section .reviewBlock4 li:nth-child(odd) {
-      background: #303133; }
-    main section .reviewBlock4 li:before {
-      content: "";
-      background: url("../img/add.svg") no-repeat center;
-      float: left;
-      width: 31px;
-      height: 28px;
-      background-size: 31px 28px;
-      padding: 5px; }
-    main section .reviewBlock4 img {
-      width: 100%;
-      height: 100%;
-      display: block;
-      max-width: 720px;
-      max-height: 400px;
-      margin: 0 auto; }
-    main section .reviewBlock6 .cas_l li {
-      display: inline-block;
-      width: 25%;
-      float: left;
-      background: none;
-      padding: 3px;
-      box-shadow: none;
-      position: relative; }
-      main section .reviewBlock6 .cas_l li div {
-        display: none;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        border: 1px solid black;
-        width: 100%;
-        line-height: 0;
-        text-align: center;
-        font-weight: bold;
-        text-transform: uppercase; }
-    main section .reviewBlock6 .cas_l li:before {
-      content: none; }
-    main section .reviewBlock6 .cas_l li:hover .play_b {
-      display: block; }
-    main section .reviewBlock6 img {
-      -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-      -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
-      box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset; }
-    main section .reviewBlock6 .g_btn {
-      background-color: green; }
-    main section .reviewBlock6 .r_btn {
-      background-color: red; }
-    main section .reviewBlock6 table {
-      width: 100%;
-      border-collapse: collapse;
-      text-align: center; }
-      main section .reviewBlock6 table tr {
-        height: 50px; }
-        main section .reviewBlock6 table tr td {
-          padding: 0 5px; }
-          main section .reviewBlock6 table tr td span {
-            padding: 10px; }
-          main section .reviewBlock6 table tr td a {
-            display: block;
-            height: 50px;
-            min-width: 90px; }
-      main section .reviewBlock6 table tr:nth-child(odd) {
-        background: #303133; }
-  main .cas_l2 {
-    width: 100%;
-    text-align: center;
-    margin: 0;
-    padding: 0; }
-    main .cas_l2 li:hover .play_b {
-      display: block; }
-    main .cas_l2 li {
-      width: 100%;
-      max-width: 250px;
-      max-height: 250px;
-      padding: 0;
-      margin: 0 auto;
-      display: inline-block;
-      margin: 1%;
-      box-sizing: border-box;
-      position: relative; }
-      main .cas_l2 li img {
-        width: 100%; }
 
-aside {
-  width: 30%; }
-  aside div {
-    position: relative; }
-  aside ul, aside .topCasino {
+h1, p, img, h2, h3 {
+  margin: 10px; }
+
+h1, h2, h3 {
+  text-align: center;
+  margin: 15px;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #a2461f; }
+
+img, table {
+  width: 100%; }
+
+.casino_review:before {
+  content: "";
+  background-image: url("../img/notes.svg");
+  width: 200px;
+  height: 200px;
+  background-size: 200px 200px;
+  display: inline-block;
+  float: left;
+  margin: 5px; }
+
+.mainImage {
+  max-width: 700px;
+  max-height: 400px;
+  margin: 0 auto;
+  display: block; }
+
+table {
+  margin: 10px;
+  border-collapse: collapse;
+  margin: 0 auto; }
+  table tr {
+    margin: 10px auto;
+    -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+    -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+    box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+    box-sizing: border-box; }
+  table tr:nth-child(odd) {
+    background: #303133; }
+  table th {
+    border-right: 1px solid #4d4d4e;
+    width: 30%; }
+  table th:before {
+    content: "";
+    background: url("../img/add.svg") no-repeat center;
+    float: left;
+    width: 31px;
+    height: 28px;
+    background-size: 31px 28px;
+    padding: 5px; }
+  table td {
+    vertical-align: middle; }
+  table span {
+    display: block;
+    max-width: 150px;
+    padding-top: 20px; }
+  table li {
+    display: inline-block;
+    width: 100%;
+    padding: 5px 20px;
+    box-sizing: border-box;
     -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
     -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
     box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset; }
-  aside ul {
-    margin: 0;
-    padding: 10px; }
-    aside ul li:before {
-      content: "";
-      background-image: url("../img/star.svg");
-      display: inline-block;
-      width: 31px;
-      height: 28px;
-      background-size: 31px 28px; }
-    aside ul li a {
-      text-decoration: underline;
-      margin-left: 10px;
-      vertical-align: top;
-      display: inline-block;
-      text-transform: uppercase;
-      vertical-align: super;
-      text-decoration: none;
-      color: #bdbcc1; }
-  aside .topCasino:hover div .play_b {
+  table li:nth-child(odd) {
+    background: #303133; }
+  table li:before {
+    content: "";
+    background: url("../img/add.svg") no-repeat center;
+    float: left;
+    width: 31px;
+    height: 28px;
+    background-size: 31px 28px;
+    padding: 5px; }
+
+.cas_l {
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
+  .cas_l li {
+    width: 200px;
+    background: none;
+    box-shadow: none;
+    position: relative;
+    display: inline-block; }
+
+li:hover .play_b {
+  display: block; }
+
+.cas_l li:before {
+  content: none; }
+
+.cas_l li:hover .play_b {
+  display: block;
+  border: 1px solid black;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase; }
+.cas_l li:hover .g_btn {
+  background-color: green; }
+.cas_l li:hover .r_btn {
+  background-color: red; }
+
+table {
+  border-collapse: collapse;
+  text-align: center; }
+  table tr {
+    height: 50px; }
+    table tr td {
+      padding: 0 5px; }
+      table tr td span {
+        padding: 10px; }
+      table tr td a {
+        display: block;
+        height: 50px;
+        min-width: 90px; }
+  table tr:nth-child(odd) {
+    background: #303133; }
+
+aside {
+  width: 30%; }
+
+#wrapper .flex-container {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch; }
+
+aside {
+  text-transform: uppercase; }
+  aside div {
+    position: relative; }
+  aside a, aside .topCasino {
+    display: inline-block;
+    padding: 5px;
+    -webkit-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+    -moz-box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset;
+    box-shadow: 0px 0px 11px -1px rgba(78, 75, 75, 0.92) inset; }
+  aside a:before {
+    content: "";
+    background-image: url("../img/star.svg");
+    width: 31px;
+    height: 28px;
+    background-size: 31px 28px;
+    display: inline-block;
+    vertical-align: middle; }
+  aside > a {
     display: block;
-    margin: 0;
-    line-height: 0; }
-  aside .topCasino:hover div img:hover {
+    color: red; }
+  aside .topCasino1:hover .play_b {
+    display: block; }
+  aside .topCasino1:hover img:hover {
     opacity: 0.1; }
   aside .topCasino {
-    padding: 3px;
-    margin-top: 15px; }
+    text-align: center; }
     aside .topCasino div {
-      text-align: center;
-      margin: 15px;
       font-size: 20px;
       font-weight: 700;
       line-height: 1;
-      text-transform: uppercase;
-      color: #a2461f; }
+      color: #a2461f;
+      padding-top: 5px; }
       aside .topCasino div img {
         width: 100%;
         max-width: 250px;
         max-height: 120px;
         margin: 0 auto;
         display: block; }
-    aside .topCasino div:nth-child(even) {
+    aside .topCasino div:first-child {
       color: #bdbbc1; }
     aside .topCasino span {
-      text-align: center;
       display: block;
+      text-transform: none;
       margin: 5px 0;
       font-family: PT Sans, sans-serif;
       font-weight: 500;
