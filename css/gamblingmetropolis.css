@@ -5,31 +5,25 @@ body {
   font-weight: regular;
   font-size: 15px;
   color: #4a5a65;
-  background-color: #E4F7FF;
-}
+  background-color: #E4F7FF; }
 
 .clearfix::after {
   content: "";
   display: table;
-  clear: both;
-}
+  clear: both; }
 
 *, *:before, *:after {
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 ul, ol {
   margin: 0;
-  padding: 0;
-}
+  padding: 0; }
 
 a, a:hover, a:focus {
-  text-decoration: none;
-}
+  text-decoration: none; }
 
 li {
-  list-style-type: none;
-}
+  list-style-type: none; }
 
 .flex-container {
   display: -ms-flexbox;
@@ -40,8 +34,7 @@ li {
   flex-wrap: wrap;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .g_btn {
   display: block;
@@ -50,133 +43,115 @@ li {
   border: 2px solid #fff;
   background-color: #569c74;
   text-transform: uppercase;
-  text-align: center;
-}
+  text-align: center; }
 
 header {
   background: #000;
-  height: 75px;
-}
-header .flex-container {
-  -webkit-align-content: center;
-  -ms-flex-line-pack: center;
-  align-content: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
+  height: 75px; }
+  header .flex-container {
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center; }
 
 .container {
   width: 100%;
   max-width: 1140px;
   height: 100%;
   margin: 0 auto;
-  background: inherit;
-}
-.container > a {
-  background: url("../img/logogambling.png") center no-repeat;
-  width: 215px;
-  height: 25px;
-  display: block;
-}
-.container nav a {
-  font-family: "Montserrat";
-  font-weight: 600;
-  color: #fff;
-  margin: 0 25px;
-  display: block;
-}
-.container nav a:hover {
-  color: #00a754;
-  border-bottom: 1px solid #00a754;
-  transition: 0.5s;
-}
-.container nav li {
-  position: relative;
-  white-space: nowrap;
-}
-.container nav .HMhm {
-  display: none;
-  position: absolute;
-  left: 0;
-  padding-top: 25px;
-}
-.container nav .HMhm li {
-  border-top: 1px solid #fff;
-  background: #000;
-}
-.container nav .HMhm a {
-  display: inline-block;
-  width: 100%;
-  color: #ddd;
-  font-weight: 300;
-  padding: 5px 45px 5px 15px;
-  margin: 0 auto;
-}
-.container nav .HMhm a:hover {
-  background-color: #00a754;
-}
-.container nav li:hover .HMhm {
-  display: block;
-}
+  background: inherit; }
+  .container > a {
+    background: url("../img/logogambling.png") center no-repeat;
+    width: 215px;
+    height: 25px;
+    display: block; }
+  .container nav a {
+    font-family: "Montserrat";
+    font-weight: 600;
+    color: #fff;
+    margin: 0 25px;
+    display: block; }
+  .container nav a:hover {
+    color: #00a754;
+    border-bottom: 1px solid #00a754;
+    transition: 0.5s; }
+  .container nav li {
+    position: relative;
+    white-space: nowrap; }
+  .container nav .HMhm {
+    display: none;
+    position: absolute;
+    left: 0;
+    padding-top: 25px; }
+    .container nav .HMhm li {
+      border-top: 1px solid #fff;
+      background: #000; }
+    .container nav .HMhm a {
+      display: inline-block;
+      width: 100%;
+      color: #ddd;
+      font-weight: 300;
+      padding: 5px 45px 5px 15px;
+      margin: 0 auto; }
+    .container nav .HMhm a:hover {
+      background-color: #00a754; }
+  .container nav li:hover .HMhm {
+    display: block; }
 
 #wrapper {
-  margin-top: 30px;
-}
+  margin-top: 30px; }
 
 main {
   width: 75%;
   font-family: Montserrat;
   font-weight: 600;
-  line-height: 1.5;
-}
-main .flex-container h1 {
-  font-size: 1.6em;
-  margin: 0.67em 0;
-  color: #191523;
-}
-main .flex-container strong {
-  color: #191523;
-}
-main .flex-container section {
-  width: 75%;
-}
-main .flex-container .rght_pic {
-  width: 25%;
-}
-main .flex-container .middle_pics {
-  margin-riht: 30px;
-  position: relative;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-}
-main .flex-container .middle_pics h4 {
-  max-width: 215px;
-  text-align: center;
-}
+  line-height: 1.5; }
+  main .flex-container h1 {
+    font-size: 1.6em;
+    margin: 0.67em 0;
+    color: #191523; }
+  main .flex-container strong {
+    color: #191523; }
+  main .flex-container section {
+    width: 75%; }
+  main .flex-container .rght_pic {
+    width: 25%; }
+    main .flex-container .rght_pic img {
+      display: block;
+      width: 100%;
+      height: auto; }
+  main .flex-container .middle_pics {
+    margin-riht: 30px;
+    position: relative;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    main .flex-container .middle_pics h4 {
+      max-width: 215px;
+      text-align: center; }
+    main .flex-container .middle_pics .g_btn {
+      position: absolute;
+      top: 55%;
+      left: 25%; }
 
 .pic1, .pic2, .pic3 {
   display: block;
   height: auto;
   width: 240px;
-  height: 145px;
-}
+  height: 145px; }
 
 .pic1 {
-  background: url("../img/g3.jpg") center no-repeat;
-}
+  background: url("../img/g3.jpg") center no-repeat; }
 
 .pic2 {
-  background: url("../img/g4.jpg") center no-repeat;
-}
+  background: url("../img/g4.jpg") center no-repeat; }
 
 .pic3 {
-  background: url("../img/g5.png") center no-repeat;
-}
+  background: url("../img/g5.png") center no-repeat; }
 
-side {
-  width: 25%;
-}
+aside {
+  width: 25%; }
 
 /*# sourceMappingURL=gamblingmetropolis.css.map */
